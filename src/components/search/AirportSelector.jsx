@@ -32,7 +32,6 @@ export default function AirportSelector({
   const fromRef = useRef(null)
   const toRef = useRef(null)
 
-  /* ---------- helpers ---------- */
   const filterAirports = (query) => {
     if (query.length < 2) return []
     const q = query.toLowerCase()
@@ -41,7 +40,7 @@ export default function AirportSelector({
       .slice(0, 8)
   }
 
-  /* ---------- dropdown positions ---------- */
+
   useEffect(() => {
     if (showFrom && fromRef.current) {
       const r = fromRef.current.getBoundingClientRect()
@@ -68,7 +67,7 @@ export default function AirportSelector({
     }
   }, [showTo])
 
-  /* ---------- select handlers (FIXED) ---------- */
+
   const selectFrom = (airport) => {
     FlightStore.update(s => { s.fromAirport = airport })
     setFromQuery(`${airport.city_name} (${airport.code})`)
