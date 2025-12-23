@@ -9,7 +9,7 @@ export const metadata = {
   title: 'FlightBooker - Find Your Perfect Flight',
   description: 'Book cheap flights with best deals and offers worldwide',
   icons: {
-    icon: '/airplane.svg',
+    icon: '/aeroplane.svg',
   }
 }
 
