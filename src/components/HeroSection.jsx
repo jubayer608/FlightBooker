@@ -33,10 +33,10 @@ export default function HeroSection() {
     },
   ]
 
-  // Store slide length separately for cleaner effect dependency
+  // Store slide length
   const slidesLength = slides.length
 
-  // Auto change slide every 6 seconds
+  // Auto change slide
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slidesLength)
@@ -45,12 +45,12 @@ export default function HeroSection() {
     return () => clearInterval(interval)
   }, [slidesLength])
 
-  // Scroll user directly to flight search section
+  // search
   const scrollToSearch = () => {
     document.getElementById('search')?.scrollIntoView({ behavior: 'smooth' })
   }
 
-  // Quick platform statistics shown below CTA
+  // statistics
   const stats = [
     { icon: Plane, value: '500+', label: 'Airlines', color: 'from-blue-500 to-blue-600' },
     { icon: TrendingUp, value: '1000+', label: 'Destinations', color: 'from-purple-500 to-purple-600' },
