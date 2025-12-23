@@ -72,7 +72,7 @@ export default function FlightSearch() {
   return (
     <section id="search" className="py-16 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 -mt-32 relative z-20">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} >
           
           
           <Card className="bg-card shadow-2xl rounded-3xl border-2 border-border overflow-visible">
@@ -83,7 +83,7 @@ export default function FlightSearch() {
                 <p className="text-muted-foreground text-lg">Loading airports...</p>
               </div>
             ) : (
-              <div className="p-6 relative z-10">
+              <div className="p-6 relative ">
 
                 <TripTypeSelector />
 
